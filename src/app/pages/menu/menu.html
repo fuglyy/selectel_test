@@ -1,0 +1,46 @@
+<div class="page">
+    <header>
+    
+        <h2>Раздел: {{ currentType }}</h2>
+        <div class="points">
+            <h3>
+                Выбрано пунктов: {{ selectedItems.length }}
+                Общее значение: {{totalValue}}
+            </h3>
+            
+        </div>
+        
+    
+    </header>
+
+    <div class="container">
+
+        <aside class="sidebar">
+            <ul class="nav">
+        <li 
+            (click)="currentType = 'тип 1'"
+            [class.active]="currentType === 'тип 1'">
+            Тип 1
+        </li>
+
+        <li 
+            (click)="currentType = 'тип 2'"
+            [class.active]="currentType === 'тип 2'">
+            Тип 2
+        </li>
+        </ul>
+        </aside>
+
+
+        <div class="content">
+            <ul>
+                <li *ngFor="let item of filteredItems">
+                    <input type="checkbox"  [(ngModel)]="item.selected">
+                    {{ item.name }} - {{ item.value }}
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+

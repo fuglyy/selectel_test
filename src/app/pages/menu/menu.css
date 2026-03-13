@@ -1,0 +1,60 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 15px;
+  border-bottom: 1px solid #ccc;
+}
+
+.points{
+    text-align: right;
+    margin: 15px;
+}
+
+.container{
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar{
+    width: 120px;
+    padding: 15px;
+    border-right: 1px solid #ccc;
+}
+
+.nav {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+}
+
+.nav li {
+  cursor: pointer;
+  padding: 5px 0;
+}
+
+.nav li.active::before {
+  content: "● ";
+}
+
+.content {
+  background-color: #ccc;
+  flex: 1;
+  padding: 15px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
